@@ -1,6 +1,11 @@
 package pobj.motx.tme1;
-
+/**
+ * 
+ * @author Alexandre XIA and Francois Xavier Drouard
+ * Classe de representation d'une case d'une grille de mot croise
+ */
 public class Case {
+	/** les coordonnees abscisse et ordonnee d'une case */
 	private int lig,col;
 	private char c;
 	

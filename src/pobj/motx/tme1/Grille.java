@@ -7,7 +7,8 @@ private Case la[][];
 		this.la= new Case[hauteur][largeur];
 		for (int i=0; i<hauteur;i++) {
 			for (int j=0; j<largeur;j++) {
-				this.la[i][j]=new Case(hauteur,largeur,' ');
+				//this.la[i][j]=new Case(hauteur,largeur,' '); <- ceci est l'erreur
+				this.la[i][j]=new Case(i,j,' ');
 			}
 		}
 	}
@@ -35,7 +36,7 @@ private Case la[][];
 				temp.la[i][j]=new Case(this.la[i][j].getLig(),this.la[i][j].getCol(),this.la[i][j].getChar());
 			}
 		}
-		if (temp.la[0][0].getChar()==' ') {System.out.println("VEJHDGEJHGHEGFJHDED");}
+		
 		return temp;
 	}
 }

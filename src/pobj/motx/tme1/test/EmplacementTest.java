@@ -18,9 +18,9 @@ public class EmplacementTest {
 	@Test
 	public void testAdd() {
 		Emplacement e = new Emplacement();
-		e.add(new Case(0, 1, '*'));
+		e.addCase(new Case(0, 1, '*'));
 		assertEquals(1, e.size());
-		e.add(new Case(1, 2, '@'));
+		e.addCase(new Case(1, 2, '@'));
 		assertEquals(2, e.size());
 	}
 
@@ -29,8 +29,8 @@ public class EmplacementTest {
 		Emplacement e = new Emplacement();
 		Case c1 = new Case(0, 1, '*');
 		Case c2 = new Case(1, 2, '@');
-		e.add(c1);
-		e.add(c2);
+		e.addCase(c1);
+		e.addCase(c2);
 		assertSame(c1, e.getCase(0));
 		assertSame(c2, e.getCase(1));
 	}

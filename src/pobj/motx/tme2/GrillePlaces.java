@@ -15,12 +15,16 @@ public GrillePlaces (Grille grille) {
 	Emplacement temp = new Emplacement();
 	for (int i =0; i<x;i++) {
 		for (int j=0; j<y;j++) {
-			if (grille.getCase(i, j).getChar()==' ') {
+			if ((grille.getCase(i, j).getChar()=='*')||(temp.size()>=2)) {
 				places.add(temp);
 				temp=new Emplacement();
+			}else if((grille.getCase(i, j).getChar()=='*')||(temp.size()<2)) {
+				temp=new Emplacement();
 			}else {
+				if (grille.getCase(i, j).getChar()=='*') {continue;}else {
 				temp.addCase(grille.getCase(i, j));
 			}
+				}
 		}
 		places.add(temp);
 		temp=new Emplacement();
@@ -49,7 +53,7 @@ public List<Emplacement> getPlaces() {
 
 
 public int getNbHorizontal() {
-	return this.hor-1;
+	return this.hor;
 }
 
 

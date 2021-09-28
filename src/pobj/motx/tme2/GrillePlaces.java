@@ -23,6 +23,7 @@ public GrillePlaces (Grille grille) {
 			}else {
 				if (grille.getCase(i, j).getChar()=='*') {continue;}else {
 				temp.addCase(grille.getCase(i, j));
+				//ioo
 			}
 				}
 		}

@@ -1,5 +1,10 @@
 package pobj.motx.tme2;
 
+import pobj.motx.tme1.*;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,6 +79,18 @@ public class Dictionnaire {
 		} else {
 			return "Dico size =" + size();
 		}
+	}
+	
+	public static Dictionnaire loadDictionnaire(String path) {
+		Dictionnaire res= new Dictionnaire();
+		try (BufferedReader br = new BufferedReader(new FileReader(path))){
+			for(String line = br.readLine();line!=null ; line=br.readLine()) {
+				res.add(line);
+			}
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 	
 }

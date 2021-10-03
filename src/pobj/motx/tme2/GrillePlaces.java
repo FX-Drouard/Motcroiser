@@ -6,8 +6,10 @@ import java.util.ArrayList;
 public class GrillePlaces {
 private List<Emplacement> places;
 private int hor =0;
+private Grille grill;
 
 public GrillePlaces (Grille grille) {
+	this.grill=grille;
 	//on commence par l'Horizontal
 	this.places=new ArrayList<>();
 	for (int i = 0; i<grille.nbLig();i++) {
@@ -85,6 +87,18 @@ private List<Case> getCol(Grille g, int j){
 	return temp;
 }
 
-
+public GrillePlaces fixer(int m, String soluce) {
+	Grille tmp2=this.grill.copy();
+	GrillePlaces res= new GrillePlaces(tmp2);
+	Emplacement e= new Emplacement();
+	for (int i =0; i<soluce.length();i++) {
+		char tmp = soluce.charAt(i);
+		Case tmp3=res.getPlaces().get(m).getCase(i);
+		tmp3.setChar(tmp);
+		e.addCase(tmp3);
+	}
+	res.getPlaces().set(m, e);
+	return res;
+}
 
 }

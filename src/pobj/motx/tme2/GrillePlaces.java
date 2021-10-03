@@ -9,6 +9,7 @@ private int hor =0;
 
 public GrillePlaces (Grille grille) {
 	//on commence par l'Horizontal
+	this.places=new ArrayList<>();
 	for (int i = 0; i<grille.nbLig();i++) {
 		this.cherchePlacesLignes(this.getLig(grille,i));
 	}
@@ -64,12 +65,25 @@ public List<Emplacement> getPlaces() {
 	return places;
 }
 
-public int getnbHorizontal() {
+public int getNbHorizontal() {
 	return hor;
 }
 
+private List<Case> getLig(Grille g, int i){
+	List<Case> temp = new ArrayList<>();
+	for (int r=0;r<g.nbCol();r++) {
+		temp.add(g.getCase(i, r));
+	}
+	return temp;
+}
 
-
+private List<Case> getCol(Grille g, int j){
+	List<Case> temp = new ArrayList<>();
+	for (int r=0;r<g.nbLig();r++) {
+		temp.add(g.getCase(r, j));
+	}
+	return temp;
+}
 
 
 }

@@ -28,6 +28,7 @@ public class GrillePotentiel {
 	}
 	
 	public boolean isDead() {
+		if (motsPot==null) {return false;}
 		for(int i=0;i<motsPot.size();i++) {
 			if(motsPot.get(i)==null) {
 				return true;

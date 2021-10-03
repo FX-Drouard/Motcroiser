@@ -12,7 +12,7 @@ public class GrillePotentiel {
 	public GrillePotentiel(/*GrillePlaces grille,*/Dictionnaire dicoComplet){
 		//this.grille=grille;
 		this.dikushioneiru=dicoComplet;
-		//Il faut limiter dikushioneiru a l'emplacement le plus grand ?
+		//Il faut limiter ajouter dans motsPot le dictionnaire filtré pour chaque emplacement
 		List<Dictionnaire> motsPot= new ArrayList<>();
 		
 	}

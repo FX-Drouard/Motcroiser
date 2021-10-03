@@ -86,4 +86,5 @@ private List<Case> getCol(Grille g, int j){
 }
 
 
+
 }

@@ -34,6 +34,7 @@ public class GrillePotentielTest {
 		GrillePlaces grille = new GrillePlaces(gr);
 
 		GrillePotentiel gp = new GrillePotentiel(grille, gut);
+		
 
 		assertTrue(!gp.isDead());
 

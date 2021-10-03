@@ -24,17 +24,20 @@ public class GrillePotentiel {
 		this.grille=grille;
 		this.dikushioneiru=dicoComplet;
 		//CHAQUE dictionnaire sera limité dans l'ordre des emplacements
-		List<Dictionnaire> motsPot= new ArrayList<>();
+		this.motsPot= new ArrayList<>();
 		//On parcours chaque emplacement de la grille et créer le dictionnaire correspondant
 		for(int i=0;i<this.grille.getPlaces().size();i++){
 			Dictionnaire copium= this.dikushioneiru.copy();
 			copium.filtreLongueur(this.grille.getPlaces().get(i).size());
-			/*List<Emplacement> tmp=this.grille.getPlaces();
+			List<Emplacement> tmp=this.grille.getPlaces();
 			//On doit parcourir chaque emplacement pour vérifier s'il contient déjà lettres (Question 2.4.2)
 			for(int j=0;j<tmp.get(i).size();j++) {
-				copium.filtreParLettre(tmp.get(i).getCase(j).getChar(),j);					
-			}*/
+				if(tmp.get(i).getCase(j).getChar()!=' ') {
+					copium.filtreParLettre(tmp.get(i).getCase(j).getChar(),j);					
+				}
+			}
 			motsPot.add(copium);
+			System.out.println("tour "+motsPot );
 		}
 	}
 	

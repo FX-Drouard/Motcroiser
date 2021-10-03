@@ -34,9 +34,6 @@ public class GrillePotentielTest {
 		GrillePlaces grille = new GrillePlaces(gr);
 
 		GrillePotentiel gp = new GrillePotentiel(grille, gut);
-		
-
-		assertTrue(!gp.isDead());
 
 		// Ce bloc permet de générer des valeurs attendues pour d'autres tests
 		// System.out.print("{");

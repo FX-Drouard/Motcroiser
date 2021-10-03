@@ -93,6 +93,12 @@ public class Dictionnaire {
 		return res;
 	}
 	
+	/**
+	 * Retire les mots qui n'ont pas le caractère c à l'indice i
+	 * @param c le caractère à vérifier
+	 * @param i l'indice du caractère à vérifier
+	 * @return le nombre de mots supprimés
+	 */
 	public int filtreParLettre(char c, int i) {
 		List<String> cible = new ArrayList<>();
 		int cpt=0;

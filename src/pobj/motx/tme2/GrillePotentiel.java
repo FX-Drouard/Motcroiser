@@ -37,7 +37,7 @@ public class GrillePotentiel {
 				}
 			}
 			motsPot.add(copium);
-			System.out.println("tour "+motsPot );
+			//System.out.println("tour "+motsPot );
 		}
 	}
 	
@@ -55,8 +55,8 @@ public class GrillePotentiel {
 	}
 	
 	/**
-	 * PLACEHOLDER
-	 * @return PLACEHOLDER
+	 * renvoie la liste des domaines potentiels
+	 * @return la liste des domaines potentiels
 	 */
 	public List<Dictionnaire> getMotsPot(){
 		return this.motsPot;
@@ -70,19 +70,7 @@ public class GrillePotentiel {
 	 */
 	public GrillePotentiel fixer(int m, String soluce) {
 		GrillePlaces tmpG = this.grille.fixer(m,soluce);
-		GrillePotentiel res=new GrillePotentiel(tmpG,this.dikushioneiru);
-		res.motsPot= new ArrayList<>();
-		for(int i=0;i<tmpG.getPlaces().size();i++){
-			Dictionnaire copium= this.dikushioneiru.copy();
-			copium.filtreLongueur(tmpG.getPlaces().get(i).size());
-			/*List<Emplacement> tmp=tmpG.getPlaces();
-			//On doit parcourir chaque emplacement pour vérifier s'il contient déjà lettres (Question 2.4.2)
-			for(int j=0;j<tmp.get(i).size();j++) {
-				copium.filtreParLettre(tmp.get(i).getCase(j).getChar(),j);					
-			}*/
-			motsPot.add(copium);
-		}
-		
+		GrillePotentiel res=new GrillePotentiel(tmpG,this.dikushioneiru);		
 		return res;
 	}
 }

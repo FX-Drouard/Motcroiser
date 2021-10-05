@@ -1,6 +1,8 @@
 package pobj.motx.tme2;
 
 import pobj.motx.tme1.*;
+import pobj.motx.tme3.csp.EnsembleLettre;
+
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -110,6 +112,42 @@ public class Dictionnaire {
 			}
 		}
 		mots=cible;
+		return cpt;
+	}
+	
+	public EnsembleLettre ensl(int indice) {
+		EnsembleLettre res=new EnsembleLettre();
+		for(int i=0;i<this.size();i++) {
+			Character ch=this.get(i).charAt(indice);
+			res.add(ch);
+		}
+		return res;
+		
+	}
+	
+	public int filtreInd(int indice, EnsembleLettre lp) {
+		int cpt=0;
+		List<String>cible=new ArrayList<>();
+		List<Character> tmp = lp.getLS();
+		//for(String mot:mots) {
+		for(Character ch:tmp) {
+			cpt+=this.filtreParLettre(ch, indice);
+		}
+			/*if(tmp.contains(mot.charAt(indice))) {
+				cible.add(mot);
+			}else {
+				cpt++;
+			}*/
+			/*for(int i=0;i<tmp.size();i++) {
+				if(mot.charAt(indice)==tmp.get(i)) {
+					cible.add(mot);
+					break;
+				}
+				if(i==tmp.size()-1) {
+					cpt++;
+				}
+			}*/			
+		
 		return cpt;
 	}
 	

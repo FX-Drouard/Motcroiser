@@ -1,4 +1,5 @@
 package pobj.motx.tme3.test;
+import pobj.motx.tme3.csp.CroixContrainte;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,7 +10,6 @@ import pobj.motx.tme1.GrilleLoader;
 import pobj.motx.tme2.Dictionnaire;
 import pobj.motx.tme2.GrillePlaces;
 import pobj.motx.tme2.GrillePotentiel;
-import pobj.motx.tme3.CroixContrainte;
 
 public class CroixContrainteTest {
 

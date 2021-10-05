@@ -9,6 +9,10 @@ public class EnsembleLettre {
 	public EnsembleLettre() {
 		this.s=new ArrayList<>();
 	}
+	
+	public EnsembleLettre(List<Character> s) {
+		this.s=s;
+	}
 	public void add(Character l) {
 		if(!this.s.contains(l)){
 			this.s.add(l);

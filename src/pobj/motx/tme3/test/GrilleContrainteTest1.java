@@ -1,5 +1,6 @@
 package pobj.motx.tme3.test;
 
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -11,9 +12,9 @@ import pobj.motx.tme1.Grille;
 import pobj.motx.tme1.GrilleLoader;
 import pobj.motx.tme2.Dictionnaire;
 import pobj.motx.tme2.GrillePlaces;
-import pobj.motx.tme3.CroixContrainte;
-import pobj.motx.tme3.GrilleContrainte;
-import pobj.motx.tme3.IContrainte;
+import pobj.motx.tme3.csp.CroixContrainte;
+import pobj.motx.tme3.csp.GrilleContrainte;
+import pobj.motx.tme3.csp.IContrainte;
 
 public class GrilleContrainteTest1 {
 
@@ -39,6 +40,7 @@ public class GrilleContrainteTest1 {
 		int[][] expected = { {0,2,2,0},
 				{1,2,2,4}};
 
+		
 		checkContraintes(gp, expected);
 
 		System.out.println("Succès test GrillePotentiel : easy.");
@@ -56,6 +58,7 @@ public class GrilleContrainteTest1 {
 		
 		for (IContrainte c : gp.getContraintes()) {
 			// penser à définir public boolean equals(Object o) dans CroixContrainte.
+			//contains va faire appel au equals de CroixContrainte
 			assertTrue(exp.contains(c));
 		}
 	}

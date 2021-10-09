@@ -38,4 +38,37 @@ public class CroixContrainte implements IContrainte {
 		return cpt;
 		
 	}
+
+
+	public int getM1() {
+		return m1;
+	}
+
+
+	public int getC1() {
+		return c1;
+	}
+
+
+	public int getM2() {
+		return m2;
+	}
+
+
+	public int getC2() {
+		return c2;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(this==o){
+			return true;
+		}
+		if(!(o instanceof CroixContrainte)) {
+			return false;
+		}
+		
+		CroixContrainte tmp= (CroixContrainte)o;
+		return (tmp.m1==this.m1 && tmp.m2==this.m2 && tmp.c1==this.c1 && tmp.c2==this.c2 );
+	}
 }

@@ -1,6 +1,8 @@
 package pobj.motx.tme3.csp;
 
-public class CSPSolver {
+import java.util.List;
+
+public class CSPSolver{
 
 	public ICSP solve(ICSP problem) {
 		System.out.println("Solve : \n" + problem);

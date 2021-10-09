@@ -47,7 +47,7 @@ public class GrillePotentiel {
 	 */
 	public boolean isDead() {
 		for(int i=0;i<motsPot.size();i++) {
-			if(motsPot.get(i)==null) {
+			if(motsPot.get(i).size()==0) {
 				return true;
 			}
 		}

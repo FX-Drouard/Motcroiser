@@ -150,4 +150,8 @@ public class Dictionnaire {
 		return cpt;
 	}
 	
+	public List<String> getListe(){
+		return this.mots;
+	}
+	
 }

@@ -8,7 +8,7 @@ import pobj.motx.tme1.Grille;
 import pobj.motx.tme1.GrilleLoader;
 import pobj.motx.tme2.Dictionnaire;
 import pobj.motx.tme2.GrillePlaces;
-import pobj.motx.tme3.GrilleContrainte;
+import pobj.motx.tme3.csp.GrilleContrainte;
 
 import static pobj.motx.tme2.test.GrillePotentielTest.testNombrePot;
 
@@ -85,7 +85,7 @@ public class GrilleContrainteTest3 {
 		assertEquals(20, gr.nbCol());
 		assertEquals(20, gr.nbLig());
 
-		// System.out.println(gr);
+		//System.out.println(gr);
 
 		GrillePlaces grille = new GrillePlaces(gr);
 
@@ -116,7 +116,7 @@ public class GrilleContrainteTest3 {
 		assertEquals(20, gr.nbCol());
 		assertEquals(20, gr.nbLig());
 
-		// System.out.println(gr);
+		//System.out.println(gr);
 
 		GrillePlaces grille = new GrillePlaces(gr);
 

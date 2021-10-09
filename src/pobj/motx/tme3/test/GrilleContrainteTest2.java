@@ -84,6 +84,7 @@ public class GrilleContrainteTest2 {
 
 		GrilleContrainte gp = new GrilleContrainte(grille, gut);
 
+		
 		assertTrue(!gp.isDead());
 
 		assertEquals(25, gp.getContraintes().size());

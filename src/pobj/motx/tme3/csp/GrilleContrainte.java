@@ -36,9 +36,12 @@ public class GrilleContrainte extends GrillePotentiel{
  			}
 		}
 		
-		for (int i=0;i<contraintes.size();i++) {
-			int tmpnb =contraintes.get(i).reduce(this);
-		}
+		this.propage();
+		
+		//BOUCLE FOR POUR LE TEST2 QUI NECESSITE REDUCE POUR REUSSIR MAIS ON UTILISE QUAND MEME PROPAGE() ????
+		/*for (int i=0;i<contraintes.size();i++) {
+			contraintes.get(i).reduce(this);
+		}*/
 
 
 	}
@@ -51,6 +54,27 @@ public class GrilleContrainte extends GrillePotentiel{
 	
 	public List<IContrainte> getContraintes(){
 		return this.contraintes;
+	}
+	
+	private boolean propage() {
+		while(true){
+			int cpt=0;
+			
+			for(int i =0; i<this.contraintes.size();i++) {
+				cpt+=this.contraintes.get(i).reduce(this);
+			}
+			
+			if(this.isDead()==true) {
+
+				return false;
+			}
+			
+			if(cpt==0) {
+				return true;
+			}
+			
+			
+		}
 	}
 
 }

@@ -119,7 +119,7 @@ public class Dictionnaire {
 		EnsembleLettre res=new EnsembleLettre();
 		for(int i=0;i<this.size();i++) {
 			Character ch=this.get(i).charAt(indice);
-			res.add(ch);
+				res.add(ch);
 		}
 		return res;
 		
@@ -129,15 +129,13 @@ public class Dictionnaire {
 		int cpt=0;
 		List<String>cible=new ArrayList<>();
 		List<Character> tmp = lp.getLS();
-		//for(String mot:mots) {
-		for(Character ch:tmp) {
-			cpt+=this.filtreParLettre(ch, indice);
-		}
-			/*if(tmp.contains(mot.charAt(indice))) {
+		for(String mot:mots) {
+			if(tmp.contains(mot.charAt(indice))) {
 				cible.add(mot);
 			}else {
 				cpt++;
-			}*/
+			}
+		}
 			/*for(int i=0;i<tmp.size();i++) {
 				if(mot.charAt(indice)==tmp.get(i)) {
 					cible.add(mot);
@@ -146,7 +144,8 @@ public class Dictionnaire {
 				if(i==tmp.size()-1) {
 					cpt++;
 				}
-			}*/			
+			}*/	
+		
 		
 		return cpt;
 	}

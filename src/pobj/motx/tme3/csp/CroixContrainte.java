@@ -25,16 +25,15 @@ public class CroixContrainte implements IContrainte {
 		List<Character> s= EnsembleLettre.copy(l1.getLS());
 		EnsembleLettre.inter(s, l2.getLS());
 		int cpt=0;
-		if (s.size()>l1.getLS().size()) {
-			cpt+=d1.filtreInd(c1, l1);
-		}else {
-			EnsembleLettre g= new EnsembleLettre(s);
+		EnsembleLettre g= new EnsembleLettre(s);
+		if (s.size()<l1.getLS().size()) {
 			cpt+=d1.filtreInd(c1, g);
-		}if (s.size()>l2.getLS().size()) {
-			cpt+=d2.filtreInd(c1, l2);
+		}else {			
+			cpt+=d1.filtreInd(c1, l1);
+		}if (s.size()<l2.getLS().size()) {
+			cpt+=d2.filtreInd(c2, g);
 		}else {
-			EnsembleLettre g= new EnsembleLettre(s);
-			cpt+=d2.filtreInd(c1, g);
+			cpt+=d2.filtreInd(c2, l2);
 		}
 		return cpt;
 		

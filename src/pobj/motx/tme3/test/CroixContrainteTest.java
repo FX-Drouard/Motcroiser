@@ -25,6 +25,7 @@ public class CroixContrainteTest {
 		
 		CroixContrainte c1 = new CroixContrainte(0,3,2,0);
 		assertEquals(242, c1.reduce(gp));
+		
 
 		CroixContrainte c2 = new CroixContrainte(1,3,2,4);
 		assertEquals(236, c2.reduce(gp));

@@ -8,7 +8,7 @@ import pobj.motx.tme1.Grille;
 import pobj.motx.tme1.GrilleLoader;
 import pobj.motx.tme2.Dictionnaire;
 import pobj.motx.tme2.GrillePlaces;
-import pobj.motx.tme3.GrilleContrainte;
+import pobj.motx.tme3.csp.GrilleContrainte;
 
 import static pobj.motx.tme2.test.GrillePotentielTest.testNombrePot;
 
@@ -61,6 +61,7 @@ public class GrilleContrainteTest2 {
 		assertEquals(2, gp.getContraintes().size());
 
 		int[] expected = { 5916, 5688 , 5916};
+		
 
 		testNombrePot(gp, expected);
 

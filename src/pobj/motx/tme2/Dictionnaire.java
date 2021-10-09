@@ -146,7 +146,7 @@ public class Dictionnaire {
 				}
 			}*/	
 		
-		
+		mots=cible;
 		return cpt;
 	}
 	

@@ -26,12 +26,20 @@ public class GrilleContrainte extends GrillePotentiel{
 					for(int j2=0;j2<tmp3.size();j2++) {
 						//Possibilité de passer par un equals
 						if(tmp2.getCase(i2).getLig()==tmp3.getCase(j2).getLig() && tmp2.getCase(i2).getCol()==tmp3.getCase(j2).getCol()) {
-							this.contraintes.add(new CroixContrainte(i,i2,j,j2));
+							if(tmp2.getCase(i2).getChar()==' ') {	
+								CroixContrainte aj= new CroixContrainte(i,i2,j,j2);
+								this.contraintes.add(aj);
+							}
 						}
 					}
 				}
  			}
 		}
+		
+		for (int i=0;i<contraintes.size();i++) {
+			int tmpnb =contraintes.get(i).reduce(this);
+		}
+
 
 	}
 	
@@ -44,4 +52,5 @@ public class GrilleContrainte extends GrillePotentiel{
 	public List<IContrainte> getContraintes(){
 		return this.contraintes;
 	}
+
 }

@@ -71,4 +71,5 @@ public class CroixContrainte implements IContrainte {
 		CroixContrainte tmp= (CroixContrainte)o;
 		return (tmp.m1==this.m1 && tmp.m2==this.m2 && tmp.c1==this.c1 && tmp.c2==this.c2 );
 	}
+	
 }

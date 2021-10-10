@@ -23,6 +23,10 @@ public class DicoVariable implements IVariable{
 	public String toString() {
 		return "DicoVariable [index=" + index + ", gp=" + gp + ", getDomain()=" + getDomain() + "]";
 	}
+
+	public GrilleContrainte getGp() {
+		return gp;
+	}
 	
 	
 	

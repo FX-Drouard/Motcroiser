@@ -51,4 +51,11 @@ public class Emplacement {
 		 }
 		 return "Le mot est: "+res;
 	 }
+	 
+	 public boolean hasCaseVide() {
+		 for (int i=0;i<this.cases.size();i++) {
+			 if (this.cases.get(i).isVide()) {return true;}
+		 }
+		 return false;
+	 }
 }

@@ -57,7 +57,7 @@ public class GrilleContrainte extends GrillePotentiel{
 	}
 	
 	private boolean propage() {
-		while(true){
+		while(true){//abomination intergalactique (je suis raciste des while)
 			int cpt=0;
 			
 			for(int i =0; i<this.contraintes.size();i++) {

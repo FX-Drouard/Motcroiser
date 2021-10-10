@@ -1,6 +1,5 @@
 package pobj.motx.tme2;
 
-import pobj.motx.tme1.*;
 import pobj.motx.tme3.csp.EnsembleLettre;
 
 

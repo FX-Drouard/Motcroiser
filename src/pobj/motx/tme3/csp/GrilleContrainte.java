@@ -10,9 +10,18 @@ import pobj.motx.tme2.GrillePotentiel;
 
 import java.util.ArrayList;
 
+/**
+* Classe permettant de gérer les contraintes de la grille
+*/ 
 public class GrilleContrainte extends GrillePotentiel{
+	/**attribut correspondant à la liste des contraintes**/
 	private List<IContrainte> contraintes;
 
+	/**
+	 * Constructeur de la GrilleContrainte en fonction de la grille GrillePlaces
+	 * @param grille la grille GrillePlaces
+	 * @param dicoComplet Le dictionnaire français complet
+	 */
 	public GrilleContrainte(GrillePlaces grille, Dictionnaire dicoComplet) {
 		super(grille,dicoComplet);
 		this.contraintes= new ArrayList<>();
@@ -46,16 +55,31 @@ public class GrilleContrainte extends GrillePotentiel{
 
 	}
 	
+	
+	/**
+	 * fixe la GrilleContrainte en ajoutant un mot à l'emplacement correspondant
+	 * @param m l'indice des cases constituants l'emplacement
+	 * @param soluce le mot solution qui sera placé
+	 * @return la nouvelle grille contrainte après le fixage
+	 */
 	public GrilleContrainte fixer(int m, String soluce) {
 		GrillePlaces tmpG = super.getGPlaces().fixer(m,soluce);
 		GrilleContrainte res= new GrilleContrainte(tmpG, super.getDico());	
 		return res;
 	}
 	
+	/**
+	 * accesseur sur la liste des contraintes
+	 * @return la liste des contraintes
+	 */
 	public List<IContrainte> getContraintes(){
 		return this.contraintes;
 	}
 	
+	/**
+	 * stabilise la liste de domaine potentiel de chaque emplacement à partir des contraintes
+	 * @return true si tout est stabilisée, false si la grille est irréalisable
+	 */
 	private boolean propage() {
 		while(true){//abomination intergalactique (je suis raciste des while)
 			int cpt=0;

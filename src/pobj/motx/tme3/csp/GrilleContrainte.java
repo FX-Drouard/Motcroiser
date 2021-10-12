@@ -81,7 +81,7 @@ public class GrilleContrainte extends GrillePotentiel{
 	 * @return true si tout est stabilisée, false si la grille est irréalisable
 	 */
 	private boolean propage() {
-		while(true){//abomination intergalactique (je suis raciste des while)
+		while(true){
 			int cpt=0;
 			
 			for(int i =0; i<this.contraintes.size();i++) {

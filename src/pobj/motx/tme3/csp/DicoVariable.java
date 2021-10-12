@@ -41,7 +41,7 @@ public class DicoVariable implements IVariable{
 	 */
 	@Override
 	public String toString() {
-		return "DicoVariable [index=" + index + ", gp=" + gp + ", getDomain()=" + getDomain() + "]";
+		return "DicoVariable [index=" + index + ", gp=" + gp.getGPlaces() + ", getDomain()=" + getDomain() + "]";
 	}
 
 	/**
@@ -50,6 +50,10 @@ public class DicoVariable implements IVariable{
 	 */
 	public GrilleContrainte getGp() {
 		return gp;
+	}
+	
+	public int getInd() {
+		return index;
 	}
 	
 	
